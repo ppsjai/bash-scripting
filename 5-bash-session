@@ -1,0 +1,73 @@
+#system variable
+echo $? 
+it will show u a number 0 mean correct output
+but it say's any number means commands have any error
+free -m
+echo $?
+freee -m
+echo $?
+now it show a number
+echo $HOSTNAME ,$USER,$RANDOM--> print random number
+
+#2.qoutes
+run this commands
+skill='devops'
+echo $skill
+skill="devops"
+echo $skill
+see no diffrences but if u use like this
+echo 'i have got $skill skill.' --> not working
+echo "i have got $skill skill." --> it will work
+2nd example
+virus="malware"
+echo "due to $virus company have lost $9 million" --> it wont print $9 number
+echo "due to $virus company have lost \$9 million" --> now it will work
+
+#command substitution
+up="uptime" or free -m
+it won't work
+but if you use back tick --> `
+up=`uptime`
+it will work
+2nd example 
+current_user=$(who)
+echo $current_user --> it will list all the current user info
+
+3rdexample ./filename.sh
+#!/bin/bash
+
+echo "welcome $USER" on $HOSTNAME."
+echo "########################################################"
+
+freeram=$(free -m | grep mem | awk '{print $4}')
+echo "########################################################"
+echo "available free ram is $freeram mb."
+echo "########################################################"
+
+#task
+load=`uptime | awk ' {print $9}' `
+rootfree=$(df -h | grep '/dev/sdal' | awk ' {print $4}')
+echo "########################################################"
+echo "current load average $load."
+echo "########################################################"
+echo "free root partiotion size is $rootfree" --> correct the script
+
+#topic --> user input
+#!/bin/bash
+
+echo "enter your skills."
+read skill
+
+echo "your $skill is in high demand in the IT industry"
+
+read -p 'username:' USR
+read -sp 'password:' pass
+
+echo
+
+echo "login successfully: welcome USER $USR."
+
+# exporting variable
+before execute this cmd --> season="rainy"
+#!/bin/bash
+echo "the $season season is more than expected this time"

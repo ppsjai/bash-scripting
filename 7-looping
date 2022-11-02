@@ -1,0 +1,62 @@
+#loops
+#!/bin/bash
+
+for var1 in python java .net ruby php
+do
+  echo "Looping...."
+  sleep 3
+  echo "############################################"
+  echo "value of var1 is $var1."
+  echo "############################################"
+  date
+done
+
+#delcaring in variables and adding up some of our user
+#!/bin/bash
+
+myuser="developer tester cybersecurity"
+
+for usr in $myuser
+do
+	echo "Adding user $usr."
+	useradd $usr
+	id $usr
+	echo "############################################"
+done
+
+#for loop in infinite times
+#!/bin/bash
+for ((;;))
+do
+   echo $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM  $RANDOM $RANDOM
+   done
+
+#while loop
+#!/bin/bash
+
+counter=0
+
+while [ #counter -lt 5 ]
+do
+   echo "Looping..."
+   echo "value of counter is $counter"
+   counter=$(( $counter + 1 )) #note if you didn't give increment value loop will #run infinity times
+   sleep 2
+done
+
+echo "out of our loop"
+
+#!/bin/bash
+
+counter=2
+
+while true
+do
+   echo "Looping..."
+   echo "value of counter is $counter"
+   counter=$(( $counter * 2 ))
+   sleep 2
+done
+
+echo "out of our loop"
+#it will calculate infinite times x2
