@@ -1,0 +1,23 @@
+#!/bin/bash
+## - was comment
+### This script system info ###
+
+echo "Welcome to bash script."
+echo
+
+#checking system uptime
+echo "#######################################"
+echo "The uptime of system is:"
+uptime
+echo
+
+#Memory utilization
+echo "########################################"
+echo "Memory utilization was :"
+free -m
+echo
+
+#Disk utilization
+echo "########################################"
+echo "Disk utilization"
+df -h
