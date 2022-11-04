@@ -47,12 +47,12 @@ mkdir -p $tempdir
 cd $tempdir
 echo
 
-#note this (1 will run first after the 2 will run) --> before executing this use #dismantle file commands on #variable-bash-aliases file (execute it and run this #file after)
+#note this ($1-->it will run first and $2--> it was our 2nd execution) --> before executing this use #dismantle file commands on #variable-bash-aliases file (execute it and run this #file after)
 #and execute the file like this 
 # ./filename.sh https://www.tooplate.com/zip-template/2091_ziggy.zip 2091_ziggy --> finally execute this
 
-wget $1 > /dev/null
-unzip $2.zip > /dev/null
+wget $1 > /dev/null #<-- $1
+unzip $2.zip > /dev/null#<-- $2
 sudo cp -r $2/* /var/www/html/
 echo
 
