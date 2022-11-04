@@ -21,3 +21,7 @@ echo
 echo "########################################"
 echo "Disk utilization"
 df -h
+
+echo "########################################"
+echo "today's date was: "
+date
